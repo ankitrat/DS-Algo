@@ -1,0 +1,46 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        
+        String s="aabb";
+        StringBuffer sb=new StringBuffer(s);
+        List<Integer> list=new ArrayList<Integer>();
+        for(int i=0;i<s.length();i++)
+        { int count=0;
+            for(int j=0;j<s.length();j++){
+                
+                if(s.charAt(i)==s.charAt(j))
+                    {
+                    count++;
+                       
+                } 
+                
+                
+            } 
+         //System.out.println(s.charAt(i)+" "+count);  
+         list.add(count);
+        } 
+      Collections.sort(list);
+        int maxvalue=list.get(list.size()-1);
+        
+        System.out.println(maxvalue);
+        System.out.println(list);
+       
+        
+        
+        
+        
+        
+        
+    }
+}
